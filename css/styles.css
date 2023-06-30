@@ -1,0 +1,186 @@
+/*CONFIGURACIONES GENERALES*/
+
+:root{
+    --color-1: #dcdcdc;
+    --color-2: #C8DAD3;
+    --color-3: #93B5B3;
+    --color-4: #63707E;
+    --white: #ffffff;
+    --black: #000000;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Kanit', sans-serif;
+    background-image: url("/assets/background.png");
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 35rem;
+    height: 100vh;
+}
+
+/*nav bar*/
+
+.header-class{
+    display: flex;
+    align-items: center;
+    width: 35rem;
+    height: 10rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.logo-header{
+    display: flex;
+    justify-content: center;
+    width: 35rem;
+}
+
+.logo-header img {
+    width: 23rem;
+}
+
+.navbar {
+    display: none;
+}
+
+.general-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Side bar left*/
+
+.sidebar-left {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    order: 1;
+}
+
+/*Curiosity*/
+
+.curiosity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35rem;
+    height: 12rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-2);
+    color: var(--color-4);
+    border: dotted 0.2rem var(--color-4);
+}
+
+.curiosity p:nth-child(1) {
+    font-size: var(--lg);
+    font-weight: 700;
+    margin: 1rem 0;
+    
+}
+
+.curiosity p:nth-child(2) {
+    font-size: var(--md);
+    margin: 1rem;
+    text-align: center;
+    
+}
+
+/*resumen curricular*/
+
+.curriculum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35rem;
+    height: 21rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+}
+
+.abstract-curriculum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.image-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+    width: 15rem;
+
+}
+
+.image-profile img{
+    height: 15rem;
+    width: 15rem;
+    object-fit: fill;
+}
+
+.text {
+    width: 18rem;
+}
+
+.text p {
+    font-size: var(--md);
+    color: var(--color-4);
+    font-weight: 300;
+    text-align: center;
+}
+
+.text p:nth-child(2) {
+    font-weight: 700;
+}
+
+.icons-net {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-top: 0.2rem dotted var(--color-4);
+}
+
+.icons-net a{
+    text-decoration: none;
+}
+
+.icons {
+    height: 3rem;
+    width: 3rem;
+}
+
+/*Main Content*/
+
+.container-body {
+    width: 35rem;
+    height: auto;
+    background-color: var(--color-3);
+    border-radius: 1rem;
+    padding: 2rem;
+}

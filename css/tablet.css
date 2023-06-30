@@ -1,0 +1,83 @@
+@media (min-width: 720px) {
+    
+    main {
+        width: 70rem;
+    }
+    
+    /*nav bar*/
+    
+    .header-class{
+        display: flex;
+        align-items: flex-end;
+        width: 70rem;
+        border-radius: 2rem;
+    }
+    
+    .logo-header{
+        width: 23rem;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        font-size: var(--lg);
+        width: 46rem;
+        margin-left: 1rem;
+    }
+    
+    .category {
+        height: 4rem;
+        width: 10rem;
+        text-align: center;
+        color: var(--color-4);
+    }
+    
+    .category:hover {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        background-color: var(--color-1);
+        border: 0.1rem dotted var(--color-4);
+        border-bottom: 0;
+    }
+
+    
+    /*Side bar left*/
+
+    .sidebar-left {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    /*Curiosity*/
+    
+    .curiosity {
+        width: 24rem;
+        height: 21rem;
+        margin-bottom: 0;
+    }
+    
+    
+    /*resumen curricular*/
+    
+    .curriculum {
+        width: 45rem;
+        height: 21rem;
+        border-radius: 1rem;
+        background-color: var(--white);
+        margin-left: 1rem;
+    }
+    
+    
+    /*Main Content*/
+    
+    .container-body {
+        width: 70rem;
+        height: auto;
+        background-color: var(--color-3);
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+}

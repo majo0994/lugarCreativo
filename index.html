@@ -4,7 +4,9 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 720px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 1000px)">
 
     <link rel="shortcut icon" href="./assets/logo-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,54 +19,77 @@
 <body>
     <main>
 
-        <aside id="header" class="header-class">
+        <header id="header" class="header-class">
             <figure class="logo-header">
                 <img src="./assets/logo.png" alt="logo">
             </figure>
             <nav class="navbar">
+                    <a class="category">Home</a>
+                    <a class="category">Sobre mi</a>
+                    <a class="category">Portafolio</a>
                     <a class="category">Entradas</a>
-                    <a class="category">Clases</a>
-                    <a class="category">Portafolio Academico</a>
-                    <a class="category">Portafolio Profesional</a>
+                    <a class="category">Game</a>
             </nav>
-            <div class="curriculum">
-                <figure class="image-profile">
-                    <img src="./assets/profile.png" alt="imageprofile">
-                </figure>
-                <div class="text">
-                    <p>Arquitecta</p>
-                    <p>Maria Jose Parejo</p>
-                    <p>Profesora FAU-UCV</p>
-                    <p>web Developer</p>
-                </div>
-                
+        </header>
 
-                <div class="icons-net">
-                        <a href="https://www.instagram.com/lugar.creativo_/"> 
-                            <img src="./assets/instagram-svgrepo-com.svg" alt="logo instagram" class="icons">
-                        </a>
+        
+        <div class="general-content">
 
-                        <a href="https://www.linkedin.com/in/mar%C3%ADa-jos%C3%A9-parejo-de-sousa-ab06a6a3/"> 
-                            <img src="./assets/linkedin-svgrepo-com.svg" alt="logo linkedin" class="icons">
-                        </a>
+            <div class="sidebar-left">
 
-                        <a href="https://github.com/majo0994"> 
-                            <img src="./assets/github-svgrepo-com.svg" alt="logo github" class="icons">
-                        </a>
+                <aside class="curiosity">
+                    <p>¿Sabías qué?</p>
+                    <p>Parpadeamos más de 10.000.000 de veces en un año.</p>
 
-                        <a href="mailto:mariajoseparejodesousa@gmail.com"> 
-                            <img src="./assets/gmail-svgrepo-com.svg" alt="logo gmail" class="icons">
-                        </a>
+                </aside>
+
+                <aside class="curriculum">
+
+                    <div class="abstract-curriculum">
+                        <figure class="image-profile">
+                            <img src="./assets/profile.png" alt="imageprofile">
+                        </figure>
+        
+                        <div class="text">
+                            <p>Arquitecta</p>
+                            <p>Maria Jose Parejo</p>
+                            <p>Profesora FAU-UCV</p>
+                            <p>web Developer</p>
+                        </div>
+                    </div>
+
+                     
+        
+                    <div class="icons-net">
+                            <a href="https://www.instagram.com/lugar.creativo_/"> 
+                                <img src="./assets/instagram-svgrepo-com.svg" alt="logo instagram" class="icons">
+                            </a>
+        
+                            <a href="https://www.linkedin.com/in/mar%C3%ADa-jos%C3%A9-parejo-de-sousa-ab06a6a3/"> 
+                                <img src="./assets/linkedin-svgrepo-com.svg" alt="logo linkedin" class="icons">
+                            </a>
+        
+                            <a href="https://github.com/majo0994"> 
+                                <img src="./assets/github-svgrepo-com.svg" alt="logo github" class="icons">
+                            </a>
+        
+                            <a href="mailto:mariajoseparejodesousa@gmail.com"> 
+                                <img src="./assets/gmail-svgrepo-com.svg" alt="logo gmail" class="icons">
+                            </a>
+                    </div>
+    
+                </aside>
+
+            </div>
+            
+    
+            <div class="container-body">
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur incidunt iusto adipisci error quis eligendi, minima exercitationem nobis vel sint ratione aliquam laborum consectetur sapiente? Dolorem tempore dicta veniam provident!</p>
+    
                 </div>
             </div>
 
-        </aside>
-
-        <div class="container-body">
-            <div class="content">
-                <p>contenido principal</p>
-
-            </div>
         </div>
 
     </main>

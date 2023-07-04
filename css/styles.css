@@ -5,6 +5,7 @@
     --color-2: #C8DAD3;
     --color-3: #93B5B3;
     --color-4: #63707E;
+    --color-5: #9f9f9f;
     --white: #ffffff;
     --black: #000000;
     --sm: 1.4rem;
@@ -26,8 +27,27 @@ body {
     place-items: center;
     width: 100%;
     height: 100vh;
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-image: url("/assets/background.png");
+}
+
+::-webkit-scrollbar {
+    height: 0.8rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: var(--white) ;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 0.4rem;
+    background-color: var(--color-3);
+    outline: none;
 }
 
 main {
@@ -44,6 +64,7 @@ main {
 
 a {
     text-decoration: none;
+    color: var(--color-4);
 }
 
 a:visited {
@@ -57,7 +78,7 @@ a:visited {
     display: flex;
     align-items: center;
     width: 35rem;
-    height: 10rem;
+    height: 8rem;
     border-radius: 1rem;
     background-color: var(--white);
     margin-bottom: 1rem;
@@ -126,6 +147,9 @@ a:visited {
     order: 1;
 }
 
+
+
+
 /*Curiosity*/
 
 .curiosity {
@@ -155,6 +179,9 @@ a:visited {
     text-align: center;
     
 }
+
+
+
 
 /*resumen curricular*/
 
@@ -222,12 +249,160 @@ a:visited {
     width: 3rem;
 }
 
+
+
 /*Main Content*/
 
 .container-body {
     width: 35rem;
     height: auto;
-    background-color: var(--color-3);
+    background-color: var(--white);
     border-radius: 1rem;
     padding: 2rem;
+    font-size: var(--md);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-body h3 {
+    color: var(--color-4);
+    font-size: var(--lg);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.title-vertical {
+    font-size: var(--md);
+    color: var(--color-4);
+    font-weight: 700;
+    writing-mode: vertical-lr;
+    background-color: var(--color-1);
+    width: 5rem;
+    height: 18rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+
+
+}
+
+
+/* contenido home*/
+
+.section-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 33rem;
+}
+
+.entradas{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.portafolio-home {
+    display: flex;
+    flex-direction: column;
+    width: 33rem;
+    }
+
+.entrada-content, .port-content-home {
+    display: flex;
+    justify-content: flex-start;
+    width: 30rem;
+    margin-left: 1rem;
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 30rem;
+}
+
+.entrada-content div {
+    width: 9rem;
+    height: 9rem;
+    margin: 0.2rem;
+    background-color: #93B5B3;
+}
+
+.project-card-home {
+    height: 9rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.project-card-home img {
+    height: 9rem;
+    object-fit: fill;
+}
+
+
+
+
+/*seccion portafolio*/
+
+.section-portafolio {
+    display: flex;
+    flex-direction: column;
+    width: 34rem;
+}
+
+.portafolio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 34rem;
+}
+
+
+.port-academico, .port-profesional, .port-docente {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.port-content {
+    display: flex;
+    justify-content: flex-start;
+    width: 25rem;
+    margin-left: 1rem;
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 25rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 16.5rem;
+    width: 20rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 0.1rem solid var(--color-1);
+    border-radius: 1rem;
+}
+
+.project-card img {
+    width: 20rem;
+    object-fit: fill;
+    border-radius: 1rem;
+}
+
+.text-container p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+    color: var(--color-5);
+    font-size: var(--sm);
+    font-weight: 300;
+}
+
+.text-container p:nth-child(1) {
+    font-weight: 500;
+    color: var(--black);
 }

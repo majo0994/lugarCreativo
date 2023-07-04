@@ -33,6 +33,7 @@
     .general-content {
         display: flex;
         flex-direction: row;
+        height: 60rem;
     }
 
     /*Side bar left*/
@@ -48,7 +49,7 @@
     .curiosity {
         width: 24rem;
         height: 24rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         border-radius: 2rem;
     }
 
@@ -82,11 +83,47 @@
 
     .container-body {
         width: 74rem;
+        height: 60rem;
         margin-left: 2rem;
         border-radius: 2rem;
         order: 2;
         padding: 2rem;
     }
+
+   
+
+    /* contenido home*/
+
+     .section-home {
+        width: 72rem;
+    }
+
+    .entrada-content, .port-content-home {
+        width: 72rem;
+    }
+
+
+
+    /*seccion portafolio*/
+    
+    .section-portafolio {
+        display: grid;
+        place-items: center;
+        width: 72rem;
+    }
+
+    .portafolio {
+        width: 70rem;
+        }
+    
+    .port-content {
+        width: 65rem;
+
+        overflow-x: auto;
+        overflow-y: auto;
+        width: 65rem;
+    }
+
 
     }
 

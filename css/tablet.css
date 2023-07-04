@@ -83,9 +83,44 @@
     .container-body {
         width: 70rem;
         height: auto;
-        background-color: var(--color-3);
         border-radius: 1rem;
         padding: 2rem;
     }
 
+
+
+    /* contenido home*/
+
+    .section-home {
+        width: 64rem;
+    }
+     
+    .entrada-content, .port-content-home {
+        width: 64rem;
+    }
+
+
+
+/*seccion portafolio*/
+
+.section-portafolio {
+    display: grid;
+    place-items: center;
+    width: 68rem;
 }
+
+.portafolio {
+    width: 68rem;
+    }
+    
+    .port-content {
+        display: flex;
+        justify-content: flex-start;
+        width: 60.5rem;
+        margin-left: 1rem;
+        overflow-x: auto;
+        overflow-y: auto;
+        width: 60.5rem;
+    }
+}
+

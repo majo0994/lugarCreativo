@@ -3,6 +3,10 @@
     main {
         width: 70rem;
     }
+
+    .inactive {
+        display: none;
+    }
     
     /*nav bar*/
     
@@ -39,6 +43,10 @@
         background-color: var(--color-1);
         border: 0.1rem dotted var(--color-4);
         border-bottom: 0;
+    }
+
+    .menu-mobile{
+        display: none;
     }
 
     

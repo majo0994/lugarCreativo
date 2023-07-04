@@ -38,6 +38,19 @@ main {
     height: 100vh;
 }
 
+.inactive {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--color-4);
+}
+
 /*nav bar*/
 
 .header-class{
@@ -68,6 +81,40 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+.menu-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    background-color: var(--white);
+    text-decoration: none;
+    list-style: none;
+    border-radius: 1rem;
+}
+
+.menu-mobile li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 10rem;
+    text-align: center;
+    color: var(--color-4);
+    font-size: var(--sm);
+    margin: 0.2rem;
+}
+
+.menu-mobile li:hover {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: var(--color-1);
+    border: 0.1rem dotted var(--color-4);
+    border-bottom: 0;
+}
+
 
 
 /*Side bar left*/

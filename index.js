@@ -3,6 +3,10 @@
 //cuiosidades
 const curiosityText = document.querySelector('.curiosity-text');
 
+//secciones principales
+const portafolioHome = document.querySelector('.portafolio-home')
+const sectionPortafolio = document.querySelector('.section-portafolio')
+
 //portafolio
 const portAcademico = document.querySelector('.academico');
 const portProfesional = document.querySelector('.profesional');
@@ -12,6 +16,7 @@ const portTotal = document.querySelector('.port-total');
 
 
 //addEventListener
+
 
 
 
@@ -136,9 +141,10 @@ let mercado = new Projects (
 
 
 academicoList.push(posada, spa, hotel, mercado);
-profesionalList.push(hotel);
-docenteList.push(mercado);
+profesionalList.push(hotel, posada);
+docenteList.push(mercado, spa);
 totalList.push(posada, spa, hotel);
+
 
 
 function projectListHome() {
@@ -149,19 +155,30 @@ function projectListHome() {
         const projectCard = document.createElement('div');
         projectCard.classList.add('project-card-home');
 
-        const enlacePort = document.createElement('a');
-        enlacePort.setAttribute('href', '/sectionsHTML/portafolio.html');
-
+        const figurePortada = document.createElement('figure');
+    
         const portada = document.createElement('img');
         portada.setAttribute('src', works.portada);
 
+        const textContainer = document.createElement('div');
+        textContainer.classList.add('text-container');
+
+        const projectName = document.createElement('p');
+        projectName.innerText = works.name
+
+        const projectdate = document.createElement('p');
+        projectdate.innerText = 'Tipo: ' + works.category
+
         portTotal.append(projectCard);
-        projectCard.appendChild(enlacePort);
-        enlacePort.appendChild(portada);
+        projectCard.append(figurePortada, textContainer);
+        figurePortada.appendChild(portada);
+        textContainer.append(projectName, projectdate)
         
     }
 
 }
+
+projectListHome()
 
 
 function projectList(arr, variable) {
@@ -195,6 +212,6 @@ function projectList(arr, variable) {
 
 }
 
-projectList(academicoList, portAcademico)
+/*projectList(academicoList, portAcademico)
 projectList(profesionalList, portProfesional)
-projectList(docenteList, portDocente)
+projectList(docenteList, portDocente)*/

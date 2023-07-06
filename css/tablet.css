@@ -13,6 +13,7 @@
     .header-class{
         display: flex;
         align-items: flex-end;
+        height: 8rem;
         width: 70rem;
         border-radius: 2rem;
     }
@@ -97,6 +98,9 @@
      
     .entrada-content, .port-content-home {
         width: 64rem;
+        overflow-x: auto;
+        overflow-y: auto;
+        width: 64rem;
     }
 
 
@@ -106,21 +110,21 @@
 .section-portafolio {
     display: grid;
     place-items: center;
-    width: 68rem;
+    width: 66rem;
 }
 
 .portafolio {
-    width: 68rem;
+    width: 66rem;
     }
     
     .port-content {
         display: flex;
         justify-content: flex-start;
-        width: 60.5rem;
+        width: 60rem;
         margin-left: 1rem;
         overflow-x: auto;
         overflow-y: auto;
-        width: 60.5rem;
+        width: 60rem;
     }
 }
 

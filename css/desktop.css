@@ -95,11 +95,14 @@
     /* contenido home*/
 
      .section-home {
-        width: 72rem;
+        width: 70rem;
     }
 
     .entrada-content, .port-content-home {
-        width: 72rem;
+        width: 70rem;
+        overflow-x: auto;
+        overflow-y: auto;
+        width: 70rem;
     }
 
 
@@ -109,7 +112,7 @@
     .section-portafolio {
         display: grid;
         place-items: center;
-        width: 72rem;
+        width: 70rem;
     }
 
     .portafolio {
@@ -117,11 +120,11 @@
         }
     
     .port-content {
-        width: 65rem;
+        width: 64rem;
 
         overflow-x: auto;
         overflow-y: auto;
-        width: 65rem;
+        width: 64rem;
     }
 
 

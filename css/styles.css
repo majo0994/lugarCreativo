@@ -266,11 +266,18 @@ a:visited {
     flex-direction: column;
 }
 
-.container-body h3 {
+h3 {
     color: var(--color-4);
     font-size: var(--lg);
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin: 0.5rem 0;
+}
+
+h4 {
+    color: var(--color-4);
+    font-size: var(--lg);
+    font-weight: 700;
+    margin-top: 1rem;
 }
 
 .title-vertical {
@@ -403,4 +410,21 @@ a:visited {
 .text-container p:nth-child(1) {
     font-weight: 500;
     color: var(--black);
+}
+
+
+/*section-aboutme*/
+
+.section-aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    color: #9f9f9f;
+    width: 33rem;
+}
+
+.section-aboutme p {
+    text-justify: auto;
+    margin: 2rem 0;
 }

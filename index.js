@@ -4,14 +4,18 @@
 const curiosityText = document.querySelector('.curiosity-text');
 
 //secciones principales
-const portafolioHome = document.querySelector('.portafolio-home')
-const sectionPortafolio = document.querySelector('.section-portafolio')
+const portafolioHome = document.querySelector('.portafolio-home');
+const sectionPortafolio = document.querySelector('.section-portafolio');
 
 //portafolio
 const portAcademico = document.querySelector('.academico');
 const portProfesional = document.querySelector('.profesional');
 const portDocente = document.querySelector('.docente');
 const portTotal = document.querySelector('.port-total');
+
+//detalle portafolio
+
+const sectionDetailPortafolio = document.querySelector('.section-detail-portafolio');
 
 
 
@@ -35,14 +39,15 @@ let curiosities = [
     'El corazón del erizo late un promedio de 300 veces por minuto.',
     'Los dientes humanos son casi tan duros como piedras.',
     'Un topo puede cavar un túnel de 300 pies de largo en solo una noche.'
-]
+];
+
 let curiosityPrint
 let academicoList = [];
 let profesionalList = [];
 let docenteList = [];
 let totalList = [];
 let totalListAleatorio = [];
-
+let trabajo
 
 
 
@@ -50,18 +55,18 @@ let totalListAleatorio = [];
 
 function random (min, arr) {
     return Math.floor(Math.random() * (arr.length - min));
-}
+};
 
 function comparar(a, b) {
     return Math.random() - 0.5;
-  }
+};
 
 function curiosityGenerator (arr) {
    let index = random(0, arr);
    curiosityPrint = arr[index];
 
    curiosityText.innerText = (curiosityPrint);
-}
+};
 
 curiosityGenerator(curiosities);
 
@@ -76,7 +81,7 @@ function Projects (category, name, date, description, portada, plans, album) {
     this.portada = portada;
     this.plans = plans;
     this.album = album;
-}
+};
 
 let posada = new Projects (
     'academico',
@@ -95,7 +100,7 @@ let posada = new Projects (
         '/portafolio/posada/vista3.jpg',
         '/portafolio/posada/vista4.jpg'
     ]
-)
+);
 
 let spa = new Projects (
     'academico',
@@ -114,7 +119,7 @@ let spa = new Projects (
         '/portafolio/spa/vista3.jpg',
         '/portafolio/spa/vista4.jpg'
     ]
-)
+);
 
 let hotel = new Projects (
     'academico',
@@ -135,7 +140,7 @@ let hotel = new Projects (
         '/portafolio/hotel/vista3.jpg',
         '/portafolio/hotel/vista4.jpg'
     ]
-)
+);
 
 let mercado = new Projects (
     'academico',
@@ -156,7 +161,7 @@ let mercado = new Projects (
         '/portafolio/mercado/vista3.jpg' 
     ]
 
-)
+);
 
 let laToraEdificio = new Projects (
     'profesional',
@@ -175,7 +180,7 @@ let laToraEdificio = new Projects (
         '/portafolio/laToraEdificio/vista3.jpg',
         '/portafolio/laToraEdificio/vista4.jpg',
     ]
-)
+);
 
 let laToraTienda = new Projects (
     'profesional',
@@ -190,8 +195,7 @@ let laToraTienda = new Projects (
         '/portafolio/laToraTienda/vista3.png',
         '/portafolio/laToraTienda/vista4.png'
     ]
-
-)
+);
 
 let entregaFinal1 = new Projects (
     'docente',
@@ -212,8 +216,7 @@ let entregaFinal1 = new Projects (
         '/portafolio/entregaFinal1/vista5.jpg',
         '/portafolio/entregaFinal1/vista6.jpg'
     ]
-
-)
+);
 
 let entregaFinal2 = new Projects (
     'docente',
@@ -241,8 +244,7 @@ let entregaFinal2 = new Projects (
         '/portafolio/entregaFinal2/vista6.jpg',
         '/portafolio/entregaFinal2/vista7.jpg'
     ]
-
-)
+);
 
 
 
@@ -257,7 +259,7 @@ totalListAleatorio = totalList.slice();
 totalListAleatorio.sort(comparar);
 projectListHome(totalListAleatorio);
 
-}
+};
 
 function projectListHome(arr) {
 
@@ -266,6 +268,10 @@ function projectListHome(arr) {
 
         const projectCard = document.createElement('div');
         projectCard.classList.add('project-card-home');
+        
+
+        const linkCard = document.createElement('a')
+        linkCard.setAttribute('href', '/sectionsHTML/portafolio.html')
 
         const figurePortada = document.createElement('figure');
     
@@ -282,49 +288,82 @@ function projectListHome(arr) {
         projectdate.innerText = 'Tipo: ' + works.category
 
         portTotal.append(projectCard);
-        projectCard.append(figurePortada, textContainer);
+        projectCard.append(linkCard, textContainer);
+        linkCard.appendChild(figurePortada)
         figurePortada.appendChild(portada);
         textContainer.append(projectName, projectdate);
         
     }
 
-}
+};
 
 
 function projectList(arr, variable) {
 
     for(let i = 0; i < arr.length; i++){
-        let works = arr[i];
+        let work = arr[i];
 
-        const projectCard = document.createElement('div');
+        const projectCard = document.createElement('li');
         projectCard.classList.add('project-card');
+        projectCard.addEventListener('click', () => { renderDetailProtafolio(work) });
 
         const figurePortada = document.createElement('figure');
     
         const portada = document.createElement('img');
-        portada.setAttribute('src', works.portada);
+        portada.setAttribute('src', work.portada);
 
         const textContainer = document.createElement('div');
         textContainer.classList.add('text-container');
 
         const projectName = document.createElement('p');
-        projectName.innerText = works.name
+        projectName.innerText = work.name
 
         const projectdate = document.createElement('p');
-        projectdate.innerText = works.date
+        projectdate.innerText = work.date
 
         variable.append(projectCard);
         projectCard.append(figurePortada, textContainer);
         figurePortada.appendChild(portada);
-        textContainer.append(projectName, projectdate);
-        
+        textContainer.append(projectName, projectdate);   
     }
-
-}
+};
 
 function renderPortafolio() {
     projectList(academicoList, portAcademico);
     projectList(profesionalList, portProfesional);
     projectList(docenteList, portDocente);
-}
+};
 
+//render detalle portafolio
+
+function renderDetailProtafolio(elemento) {
+
+    sectionDetailPortafolio.innerHTML = '';
+
+    const albumImages = document.createElement('figure');
+    albumImages.classList.add('album-images');
+
+
+    const views = document.createElement('img');
+    views.setAttribute('src', elemento.portada);
+    
+
+    const textDetail = document.createElement('div');
+    textDetail.classList.add('text-detail');
+
+    const parrafo1 = document.createElement('p');
+    parrafo1.innerText = elemento.name;
+
+    const parrafo2 = document.createElement('p');
+    parrafo2.innerText = elemento.category;
+
+    const parrafo3 = document.createElement('p');
+    parrafo3.innerText = elemento.date;
+
+    const parrafo4 = document.createElement('p');
+    parrafo4.innerText = elemento.description;
+
+    sectionDetailPortafolio.append(albumImages, textDetail);
+    albumImages.append(views);
+    textDetail.append(parrafo1, parrafo2, parrafo3, parrafo4)
+};

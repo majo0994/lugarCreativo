@@ -59,10 +59,6 @@ main {
     height: 100vh;
 }
 
-.inactive {
-    display: none;
-}
-
 a {
     text-decoration: none;
     color: var(--color-4);
@@ -71,6 +67,10 @@ a {
 a:visited {
     text-decoration: none;
     color: var(--color-4);
+}
+
+.inactive {
+    display: none !important;
 }
 
 /*nav bar*/
@@ -360,7 +360,6 @@ h4 {
     width: 33rem;
 }
 
-
 .port-academico, .port-profesional, .port-docente {
     display: flex;
     flex-direction: row;
@@ -387,6 +386,11 @@ h4 {
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     border: 0.1rem solid var(--color-1);
+    border-radius: 1rem;
+}
+
+.project-card:hover {
+    border: 0.2rem dotted var(--color-4);
     border-radius: 1rem;
 }
 
@@ -428,3 +432,51 @@ h4 {
     text-justify: auto;
     margin: 2rem 0;
 }
+
+
+/*section-detail-portafolio*/
+
+.section-detail-portafolio {
+    display: flex;
+    flex-direction: column;
+    width: 33rem;
+    background-color: var(--white); 
+}
+
+.album-images {
+    width: 33rem;
+}
+
+.album-images img {
+    width: 33rem;
+}
+
+.text-detail {
+    display: flex;
+    flex-direction: column;
+    width: 33rem;
+    color: var(--black);
+    font-size: var(--md);
+    margin-top: 2rem;
+}
+
+.text-detail p:nth-child(1) {
+    font-size: var(--lg);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.text-detail p:nth-child(2), .text-detail p:nth-child(3) {
+    font-size: var(--sm);
+    font-weight: 300;
+    color: var(--color-5);
+}
+
+.text-detail p:nth-child(4) {
+    font-size: var(--md);
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+

@@ -131,7 +131,34 @@
 
     .section-aboutme {
         width: 70rem;
+        
     }
+
+    /*section-detail-portafolio*/
+
+.contenido-modal {
+    width: 90rem;
+    height: 70rem;
+}
+
+.album-images {
+    width: 84rem;
+}
+
+.album-images img {
+    width: 80rem;
+}
+
+.text-detail {
+    width: 80rem;
+}
+
+.text-detail p:nth-child(4) {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 12rem;
+}
+
 
 
     }

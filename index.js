@@ -338,7 +338,20 @@ function renderPortafolio() {
 
 function renderDetailProtafolio(elemento) {
 
+
+
     sectionDetailPortafolio.innerHTML = '';
+    sectionDetailPortafolio.style.display = 'block';
+
+    const contenidoModal = document.createElement('div');
+    contenidoModal.classList.add('contenido-modal');
+
+    const closeButton = document.createElement('div');
+    closeButton.classList.add('button-close');
+    closeButton.addEventListener('click', () => { close(sectionDetailPortafolio) })
+
+    const x = document.createElement('p');
+    x.innerText = 'X'
 
     const albumImages = document.createElement('figure');
     albumImages.classList.add('album-images');
@@ -363,7 +376,13 @@ function renderDetailProtafolio(elemento) {
     const parrafo4 = document.createElement('p');
     parrafo4.innerText = elemento.description;
 
-    sectionDetailPortafolio.append(albumImages, textDetail);
+    sectionDetailPortafolio.append(contenidoModal);
+    contenidoModal.append(closeButton, albumImages, textDetail);
+    closeButton.appendChild(x);
     albumImages.append(views);
     textDetail.append(parrafo1, parrafo2, parrafo3, parrafo4)
 };
+
+function close(close) {
+    close.style.display = 'none';
+}

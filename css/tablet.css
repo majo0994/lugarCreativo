@@ -133,6 +133,32 @@
         width: 66rem;
     }
 
+    /*section-detail-portafolio*/
+
+.contenido-modal {
+    width: 66rem;
+}
+
+.album-images {
+    width: 62rem;
+}
+
+.album-images img {
+    width: 62rem;
+}
+
+.text-detail {
+    width: 62rem;
+}
+
+.text-detail p:nth-child(4) {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 20rem;
+}
+
+
+
 
 }
 

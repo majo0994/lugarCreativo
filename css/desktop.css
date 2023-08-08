@@ -143,14 +143,11 @@
 
 .album-images {
     width: 84rem;
-}
-
-.album-images img {
-    width: 80rem;
+    height: 47.5rem;
 }
 
 .text-detail {
-    width: 80rem;
+    width: 84rem;
 }
 
 .text-detail p:nth-child(4) {

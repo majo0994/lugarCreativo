@@ -5,7 +5,7 @@
     --color-2: #C8DAD3;
     --color-3: #93B5B3;
     --color-4: #63707E;
-    --color-5: #9f9f9f;
+    --color-5: #7a7a7a;
     --white: #ffffff;
     --black: #000000;
     --sm: 1.4rem;
@@ -261,7 +261,6 @@ a:visited {
     border-radius: 1rem;
     padding: 1rem;
     font-size: var(--md);
-
     display: flex;
     flex-direction: column;
 }
@@ -478,15 +477,50 @@ h4 {
     margin: 0.5rem;
 }
 
+.button-close:hover {
+    background-color: var(--color-3);
+    cursor: pointer;
+}
+
+
 .album-images {
     width: 33rem;
+    height: 18.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.album-images img {
-    width: 33rem;
+.album {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.anterior {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-4);
+    border-radius: 1rem;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+}
+
+.siguiente {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-4);
+    border-radius: 1rem;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+}
+
+.anterior:hover, .siguiente:hover {
+    background-color: var(--color-3);
+    cursor: pointer; 
 }
 
 .text-detail {
@@ -518,6 +552,9 @@ h4 {
     overflow-x: auto;
     overflow-y: auto;
     height: 35rem;
+    color: var(--color-5);
 }
+
+
 
 

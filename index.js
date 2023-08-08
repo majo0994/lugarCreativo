@@ -47,7 +47,8 @@ let profesionalList = [];
 let docenteList = [];
 let totalList = [];
 let totalListAleatorio = [];
-let trabajo
+let indiceImagen = 0;
+let carrusel = [];
 
 
 
@@ -73,14 +74,13 @@ curiosityGenerator(curiosities);
 
 //section de portafolio
 
-function Projects (category, name, date, description, portada, plans, album) {
+function Projects (category, name, date, description, portada, images) {
     this.category = category;
     this.name = name;
     this.date = date;
     this.description = description;
     this.portada = portada;
-    this.plans = plans;
-    this.album = album;
+    this.images = images;
 };
 
 let posada = new Projects (
@@ -90,15 +90,13 @@ let posada = new Projects (
     'Proyecto realizado en el 3er semestre de la carrera. La posada en Choroní busca reinterpretar la arquitectura colonial y convertirla en arquitectura contemporánea.',
     '/portafolio/posada/vista1.jpg',
     [
-        '/portafolio/posada/plantaPb.png',
-        '/portafolio/posada/plantaP1.png',
-        '/portafolio/posada/seccion1.png'
-    ],
-    [
         '/portafolio/posada/vista1.jpg',
         '/portafolio/posada/vista2.jpg',
         '/portafolio/posada/vista3.jpg',
-        '/portafolio/posada/vista4.jpg'
+        '/portafolio/posada/vista4.jpg',
+        '/portafolio/posada/plantaPb.png',
+        '/portafolio/posada/plantaP1.png',
+        '/portafolio/posada/seccion1.jpg'
     ]
 );
 
@@ -109,15 +107,13 @@ let spa = new Projects (
     'Proyecto realizado en el 4to semestre de la carrera. Este proyecto, además de exigir el desarrollo de una edificación, también exigía trabajo topográfico. El centro de salud, se desarrolla como una edificación que se impone en la parte alta de la colina, donde con juego de patios y terrazas busca lograr distintas sensaciones espaciales.',
     '/portafolio/spa/vista2.jpg',
     [
-        '/portafolio/spa/plantaPb.jpg',
-        '/portafolio/spa/plantaP1.jpg',
-        '/portafolio/spa/seccion1.jpg',
-    ],
-    [
         '/portafolio/spa/vista1.jpg',
         '/portafolio/spa/vista2.jpg',
         '/portafolio/spa/vista3.jpg',
-        '/portafolio/spa/vista4.jpg'
+        '/portafolio/spa/vista4.jpg',
+        '/portafolio/spa/plantaPb.jpg',
+        '/portafolio/spa/plantaP1.jpg',
+        '/portafolio/spa/seccion1.jpg',
     ]
 );
 
@@ -128,17 +124,15 @@ let hotel = new Projects (
     'Proyecto realizado en el 6to semestre de la carrera.Tenía como objetivo la apropiación de un terreno ficticio de pendiente perfecta rodeado de árboles. La creación del lugar, se realiza a través de una trama espacial que organízalos volúmenes que forman el conjunto.',
     '/portafolio/hotel/vista2.jpg',
     [
+        '/portafolio/hotel/vista1.jpg',
+        '/portafolio/hotel/vista2.jpg',
+        '/portafolio/hotel/vista3.jpg',
+        '/portafolio/hotel/vista4.jpg',
         '/portafolio/hotel/plantaPb.jpg',
         '/portafolio/hotel/plantaP1.png',
         '/portafolio/hotel/seccion1.png',
         '/portafolio/hotel/seccion2.png',
         '/portafolio/hotel/axo.png'
-    ],
-    [
-        '/portafolio/hotel/vista1.jpg',
-        '/portafolio/hotel/vista2.jpg',
-        '/portafolio/hotel/vista3.jpg',
-        '/portafolio/hotel/vista4.jpg'
     ]
 );
 
@@ -149,16 +143,14 @@ let mercado = new Projects (
     'Proyecto realizado en el 9no semestre de la carrera. El proyecto busca solucionar la falta de mercados consolidados en el pueblo de Choron¬í, por lo que a través de una cubierta de madera y volúmenes de tiendas busca crear espacios al aire libre que permitan el tamizado de la luz.',
     '/portafolio/mercado/vista1.jpg',
     [   
+        '/portafolio/mercado/vista1.jpg',
+        '/portafolio/mercado/vista2.jpg',
+        '/portafolio/mercado/vista3.jpg',
         '/portafolio/mercado/plantaPb.png',
         '/portafolio/mercado/axo.png',
         '/portafolio/mercado/seccion1.png',
         '/portafolio/mercado/seccion2.png',
         '/portafolio/mercado/kioskos.png'
-    ],
-    [
-        '/portafolio/mercado/vista1.jpg',
-        '/portafolio/mercado/vista2.jpg',
-        '/portafolio/mercado/vista3.jpg' 
     ]
 
 );
@@ -170,15 +162,13 @@ let laToraEdificio = new Projects (
     'Se plantea una propuesta conformada por un cuerpo bajo comercial, un cuerpo alto destinado a uso de oficinas rematado en su último nivel por una terraza para uso comercial. Destaca por sus dimensiones el cuerpo bajo, de mayor ubicación el cual está conformado por los tres niveles comerciales que albergarán la actividad principal del conjunto. El cuerpo alto conformado por 5 niveles de oficinas, más esbelto que su contraparte comercial, remata en una terraza descubierta destinada a uso comercial. La fachada de la propuesta se encuentra conformada por un sistema de muro cortina de cristal y aluminio y revestimientos de materiales sintéticos de alta tecnología para garantizar la integridad visual y física de la edificación en el tiempo. El acceso peatonal se plantea desde la esquina de la parcela, entre la Av. Orinoco y la calle Cali, donde destaca la escalinata de ingreso principal de la edificación, garantizando así una lectura clara de dicha entrada. El ingreso vehicular a los dos sótanos de estacionamiento se plantea desde la calle Cali, al sur de la parcela.',
     '/portafolio/laToraEdificio/vista1.jpg',
     [
-        '/portafolio/laToraEdificio/plantaPb.jpg',
-        '/portafolio/laToraEdificio/plantaP1.jpg',
-        '/portafolio/laToraEdificio/seccion1.jpg'
-    ],
-    [
         '/portafolio/laToraEdificio/vista1.jpg',
         '/portafolio/laToraEdificio/vista2.jpg',
         '/portafolio/laToraEdificio/vista3.jpg',
         '/portafolio/laToraEdificio/vista4.jpg',
+        '/portafolio/laToraEdificio/plantaPb.jpg',
+        '/portafolio/laToraEdificio/plantaP1.jpg',
+        '/portafolio/laToraEdificio/seccion1.jpg'
     ]
 );
 
@@ -188,7 +178,6 @@ let laToraTienda = new Projects (
     2023,
     'Proyecto de carnicería boutique, donde la venta de carne se vende como una nueva experiencia a todos los clientes.',
     '/portafolio/laToraTienda/vista3.png',
-    [],
     [
         '/portafolio/laToraTienda/vista1.png',
         '/portafolio/laToraTienda/vista2.png',
@@ -204,17 +193,15 @@ let entregaFinal1 = new Projects (
     '',
     '/portafolio/entregaFinal1/portada.jpg',
     [
-        '/portafolio/entregaFinal1/plano1.jpg',
-        '/portafolio/entregaFinal1/plano2.jpg',
-        '/portafolio/entregaFinal1/plano3.jpg',
-    ],
-    [
         '/portafolio/entregaFinal1/vista1.jpg',
         '/portafolio/entregaFinal1/vista2.jpg',
         '/portafolio/entregaFinal1/vista3.jpg',
         '/portafolio/entregaFinal1/vista4.jpg',
         '/portafolio/entregaFinal1/vista5.jpg',
-        '/portafolio/entregaFinal1/vista6.jpg'
+        '/portafolio/entregaFinal1/vista6.jpg',
+        '/portafolio/entregaFinal1/plano1.jpg',
+        '/portafolio/entregaFinal1/plano2.jpg',
+        '/portafolio/entregaFinal1/plano3.jpg',
     ]
 );
 
@@ -225,24 +212,21 @@ let entregaFinal2 = new Projects (
     'El ejercicio Final del semestre, se plantea como la conclusión y verificación de los conocimientos adquiridos. Donde a través de un terreno utópico con pendiente perfecta del 20% deben realizar un desarrollo de idea de edificación que les permita la apropiación del lugar a través de volumetría y trabajo topográfico, donde más adelante dicha incipiente concepción de edificación se le asigne un uso definido, que en este caso el uso escogido es una vivienda.',
     '/portafolio/entregaFinal2/portada.jpg',
     [
-        '/portafolio/entregaFinal2/plano1.jpg',
-        '/portafolio/entregaFinal2/plano2.jpg',
-        '/portafolio/entregaFinal2/plano3.jpg',
-        '/portafolio/entregaFinal2/plano4.jpg',
-        '/portafolio/entregaFinal2/plano5.jpg',
-        '/portafolio/entregaFinal2/plano6.jpg',
-        '/portafolio/entregaFinal2/plano7.jpg',
-        '/portafolio/entregaFinal2/plano8.jpg',
-        '/portafolio/entregaFinal2/plano9.jpg'
-    ],
-    [
         '/portafolio/entregaFinal2/vista1.jpg',
         '/portafolio/entregaFinal2/vista2.jpg',
         '/portafolio/entregaFinal2/vista3.jpg',
         '/portafolio/entregaFinal2/vista4.jpg',
         '/portafolio/entregaFinal2/vista5.jpg',
         '/portafolio/entregaFinal2/vista6.jpg',
-        '/portafolio/entregaFinal2/vista7.jpg'
+        '/portafolio/entregaFinal2/vista7.jpg',
+        '/portafolio/entregaFinal2/plano1.jpg',
+        '/portafolio/entregaFinal2/plano2.jpg',
+        '/portafolio/entregaFinal2/plano3.jpg',
+        '/portafolio/entregaFinal2/plano4.jpg',
+        '/portafolio/entregaFinal2/plano5.jpg',
+        '/portafolio/entregaFinal2/plano6.jpg',
+        '/portafolio/entregaFinal2/plano8.jpg',
+        '/portafolio/entregaFinal2/plano9.jpg'
     ]
 );
 
@@ -338,7 +322,7 @@ function renderPortafolio() {
 
 function renderDetailProtafolio(elemento) {
 
-
+    carrusel = elemento.images;
 
     sectionDetailPortafolio.innerHTML = '';
     sectionDetailPortafolio.style.display = 'block';
@@ -356,9 +340,19 @@ function renderDetailProtafolio(elemento) {
     const albumImages = document.createElement('figure');
     albumImages.classList.add('album-images');
 
+    const anterior = document.createElement('img');
+    anterior.classList.add('anterior');
+    anterior.setAttribute('src', '/assets/anterior.png')
+    anterior.addEventListener('click', () => {anteriorImagen(carrusel)});
+
+    const siguiente = document.createElement('img');
+    siguiente.classList.add('siguiente');
+    siguiente.setAttribute('src', '/assets/siguiente.png')
+    siguiente.addEventListener('click', () => {siguienteImagen(carrusel)});
 
     const views = document.createElement('img');
-    views.setAttribute('src', elemento.portada);
+    views.classList.add('album');
+    views.setAttribute('src', carrusel[0]);
     
 
     const textDetail = document.createElement('div');
@@ -379,10 +373,35 @@ function renderDetailProtafolio(elemento) {
     sectionDetailPortafolio.append(contenidoModal);
     contenidoModal.append(closeButton, albumImages, textDetail);
     closeButton.appendChild(x);
-    albumImages.append(views);
+    albumImages.append(anterior, views, siguiente);
     textDetail.append(parrafo1, parrafo2, parrafo3, parrafo4)
 };
 
 function close(close) {
     close.style.display = 'none';
+    indiceImagen = 0
 }
+  
+function siguienteImagen(carrusel) {
+    if (indiceImagen > 0) {
+        indiceImagen--;
+      } else {
+        indiceImagen = carrusel.length - 1;
+      }
+      actualizarImagen(carrusel);
+};
+  
+function anteriorImagen(carrusel) {
+    if (indiceImagen < carrusel.length - 1) {
+        indiceImagen++;
+      } else {
+        indiceImagen = 0;
+      }
+      actualizarImagen(carrusel);
+};
+
+function actualizarImagen(carrusel) {
+    const imagen = document.querySelector('.album');
+    imagen.src = carrusel[indiceImagen];
+    console.log(indiceImagen)
+  }

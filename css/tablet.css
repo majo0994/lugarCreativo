@@ -115,9 +115,9 @@
 
 .portafolio {
     width: 66rem;
-    }
+}
     
-    .port-content {
+.port-content {
         display: flex;
         justify-content: flex-start;
         width: 60rem;
@@ -125,15 +125,15 @@
         overflow-x: auto;
         overflow-y: auto;
         width: 60rem;
-    }
+}
 
-    /*section-aboutme*/
+/*section-aboutme*/
 
-    .section-aboutme {
+.section-aboutme {
         width: 66rem;
-    }
+}
 
-    /*section-detail-portafolio*/
+/*section-detail-portafolio*/
 
 .contenido-modal {
     width: 66rem;
@@ -141,11 +141,9 @@
 
 .album-images {
     width: 62rem;
+    height: 35rem;
 }
 
-.album-images img {
-    width: 62rem;
-}
 
 .text-detail {
     width: 62rem;

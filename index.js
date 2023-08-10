@@ -94,8 +94,8 @@ let posada = new Projects (
         '/portafolio/posada/vista2.jpg',
         '/portafolio/posada/vista3.jpg',
         '/portafolio/posada/vista4.jpg',
-        '/portafolio/posada/plantaPb.png',
-        '/portafolio/posada/plantaP1.png',
+        '/portafolio/posada/plantaPb.jpg',
+        '/portafolio/posada/plantaP1.jpg',
         '/portafolio/posada/seccion1.jpg'
     ]
 );
@@ -129,10 +129,10 @@ let hotel = new Projects (
         '/portafolio/hotel/vista3.jpg',
         '/portafolio/hotel/vista4.jpg',
         '/portafolio/hotel/plantaPb.jpg',
-        '/portafolio/hotel/plantaP1.png',
-        '/portafolio/hotel/seccion1.png',
-        '/portafolio/hotel/seccion2.png',
-        '/portafolio/hotel/axo.png'
+        '/portafolio/hotel/plantaP1.jpg',
+        '/portafolio/hotel/seccion1.jpg',
+        '/portafolio/hotel/seccion2.jpg',
+        '/portafolio/hotel/axo.jpg'
     ]
 );
 
@@ -146,11 +146,11 @@ let mercado = new Projects (
         '/portafolio/mercado/vista1.jpg',
         '/portafolio/mercado/vista2.jpg',
         '/portafolio/mercado/vista3.jpg',
-        '/portafolio/mercado/plantaPb.png',
-        '/portafolio/mercado/axo.png',
-        '/portafolio/mercado/seccion1.png',
-        '/portafolio/mercado/seccion2.png',
-        '/portafolio/mercado/kioskos.png'
+        '/portafolio/mercado/plantaPb.jpg',
+        '/portafolio/mercado/axo.jpg',
+        '/portafolio/mercado/seccion1.jpg',
+        '/portafolio/mercado/seccion2.jpg',
+        '/portafolio/mercado/kioskos.jpg'
     ]
 
 );
@@ -179,10 +179,10 @@ let laToraTienda = new Projects (
     'Proyecto de carnicería boutique, donde la venta de carne se vende como una nueva experiencia a todos los clientes.',
     '/portafolio/laToraTienda/vista3.png',
     [
-        '/portafolio/laToraTienda/vista1.png',
-        '/portafolio/laToraTienda/vista2.png',
-        '/portafolio/laToraTienda/vista3.png',
-        '/portafolio/laToraTienda/vista4.png'
+        '/portafolio/laToraTienda/vista1.jpg',
+        '/portafolio/laToraTienda/vista2.jpg',
+        '/portafolio/laToraTienda/vista3.jpg',
+        '/portafolio/laToraTienda/vista4.jpg'
     ]
 );
 

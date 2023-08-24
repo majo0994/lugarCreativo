@@ -177,7 +177,7 @@ let laToraTienda = new Projects (
     'Tienda La Tora',
     2023,
     'Proyecto de carnicería boutique, donde la venta de carne se vende como una nueva experiencia a todos los clientes.',
-    '/portafolio/laToraTienda/vista3.png',
+    '/portafolio/laToraTienda/vista3.jpg',
     [
         '/portafolio/laToraTienda/vista1.jpg',
         '/portafolio/laToraTienda/vista2.jpg',

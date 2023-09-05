@@ -136,25 +136,83 @@
 
     /*section-detail-portafolio*/
 
-.contenido-modal {
-    width: 90rem;
-    height: 70rem;
-}
+    .contenido-modal {
+        width: 90rem;
+        height: 70rem;
+    }
 
-.album-images {
-    width: 84rem;
-    height: 47.5rem;
-}
+    .album-images {
+        width: 84rem;
+        height: 47.5rem;
+    }
 
-.text-detail {
-    width: 84rem;
-}
+    .text-detail {
+        width: 84rem;
+    }
 
-.text-detail p:nth-child(4) {
-    overflow-x: auto;
-    overflow-y: auto;
-    height: 12rem;
-}
+    .text-detail p:nth-child(4) {
+        overflow-x: auto;
+        overflow-y: auto;
+        height: 12rem;
+    }
+
+    /*secion juego*/
+
+    .game-title {
+        display: flex;
+        justify-content: center;
+        font-size: var(--lg);
+        font-weight: 700;
+        color: var(--color-4);
+        margin-bottom: 2rem;
+    }
+
+    .cards {
+        width: 66rem;
+        height: 35rem;
+    }
+
+    .card {
+        width: 20rem;
+        height: 35rem;
+        display: flex;
+        align-items: end;
+    }
+
+    .card img {
+        height: 19rem;
+        width: 19rem;
+        margin-bottom: 1rem;
+    }
+
+    .card:hover {
+        width: 20rem;
+        height: 35rem;
+    }
+
+    .vidas p:nth-child(1) {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        font-size: 3rem;
+    }
+    
+    .vidas p:nth-child(2) {
+        font-size: var(--md);
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+
+    .reiniciar {
+        position: absolute;
+        bottom: 4rem;
+        font-weight: 700;
+        font-size: var(--lg);
+        border-radius: 1rem;
+        height: 4rem;
+        margin-top: 2rem;
+    }
 
 
 

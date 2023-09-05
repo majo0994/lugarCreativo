@@ -105,55 +105,79 @@
 
 
 
-/*seccion portafolio*/
+    /*seccion portafolio*/
 
-.section-portafolio {
-    display: grid;
-    place-items: center;
-    width: 66rem;
-}
+    .section-portafolio {
+        display: grid;
+        place-items: center;
+        width: 66rem;
+    }
 
-.portafolio {
-    width: 66rem;
-}
-    
-.port-content {
-        display: flex;
-        justify-content: flex-start;
-        width: 60rem;
-        margin-left: 1rem;
+    .portafolio {
+        width: 66rem;
+    }
+        
+    .port-content {
+            display: flex;
+            justify-content: flex-start;
+            width: 60rem;
+            margin-left: 1rem;
+            overflow-x: auto;
+            overflow-y: auto;
+            width: 60rem;
+    }
+
+    /*section-aboutme*/
+
+    .section-aboutme {
+            width: 66rem;
+    }
+
+    /*section-detail-portafolio*/
+
+    .contenido-modal {
+        width: 66rem;
+    }
+
+    .album-images {
+        width: 62rem;
+        height: 35rem;
+    }
+
+
+    .text-detail {
+        width: 62rem;
+    }
+
+    .text-detail p:nth-child(4) {
         overflow-x: auto;
         overflow-y: auto;
-        width: 60rem;
-}
+        height: 20rem;
+    }
 
-/*section-aboutme*/
+    /*secion juego*/
 
-.section-aboutme {
+    .cards {
         width: 66rem;
-}
+        height: 20rem;
+    }
 
-/*section-detail-portafolio*/
+    .card {
+        width: 20rem;
+        height: 20rem;
+    }
 
-.contenido-modal {
-    width: 66rem;
-}
+    .card img {
+        height: 19rem;
+        width: 19rem;
+    }
 
-.album-images {
-    width: 62rem;
-    height: 35rem;
-}
+    .card:hover {
+        width: 20rem;
+        height: 20rem;
+    }
 
-
-.text-detail {
-    width: 62rem;
-}
-
-.text-detail p:nth-child(4) {
-    overflow-x: auto;
-    overflow-y: auto;
-    height: 20rem;
-}
+    
 
 
 

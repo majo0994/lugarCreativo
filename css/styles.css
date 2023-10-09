@@ -11,6 +11,7 @@
     --sm: 1.4rem;
     --md: 1.6rem;
     --lg: 1.8rem;
+    --xl: 2.4rem;
 }
 
 * {
@@ -328,7 +329,37 @@ h4 {
 }
 
 
-.entrada-card, .project-card-home {
+.entrada-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 16.5rem;
+    width: 20rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 0.1rem solid var(--color-1);
+    border-radius: 1rem;
+}
+
+.tilte-text {
+    margin: 1rem;
+    width: 18rem;
+    text-align: left;
+    font-size: var(--xl);
+    font-weight: 500;
+    color: var(--black);
+}
+
+.date-text {
+    text-align: left;
+    width: 18rem;
+    font-size: var(--md);
+    font-weight: 300;
+    color: var(--color-5);
+}
+
+.project-card-home {
     display: flex;
     flex-direction: column;
     align-items: center;

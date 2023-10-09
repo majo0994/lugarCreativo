@@ -7,6 +7,9 @@ const curiosityText = document.querySelector('.curiosity-text');
 const portafolioHome = document.querySelector('.portafolio-home');
 const sectionPortafolio = document.querySelector('.section-portafolio');
 
+//entradas
+const entradaContent = document.querySelector('.entrada-content');
+
 //portafolio
 const portAcademico = document.querySelector('.academico');
 const portProfesional = document.querySelector('.profesional');
@@ -50,7 +53,7 @@ let totalListAleatorio = [];
 let indiceImagen = 0;
 let carrusel = [];
 
-
+let entradasTextos = []
 
 //functios
 
@@ -230,19 +233,58 @@ let entregaFinal2 = new Projects (
     ]
 );
 
-
-
-
 academicoList.push(posada, spa, hotel, mercado);
 profesionalList.push(laToraEdificio, laToraTienda);
 docenteList.push(entregaFinal1, entregaFinal2);
 totalList.push(posada, spa, hotel, mercado, laToraEdificio, laToraTienda, entregaFinal1, entregaFinal2);
 
+function Texts (title, date, content) {
+    this.title = title;
+    this.date = date;
+    this.content = content;
+};
+
+let entrada1 = new Texts (
+    'Que dificil es comenzar',
+    '2023/10/9',
+    'en construccion'
+);
+
+let entrada2 = new Texts (
+    'Proyecto, Espacio Publico y Habitar',
+    '2023/10/10',
+    'Para hablar del Proyecto y el espacio público, primero es necesario entender la relación entre la arquitectura y la ciudad, y es que, según Moneo en su libro “Inquietud Teórica y Estrategia Proyectual en la Obra de Ocho Arquitectos Contemporáneos” donde al hablar de Aldo Rossi dice “para Rossi no hay duda: el territorio de la arquitectura es la ciudad”  esto me lleva a desencadenar una sucesión de ideas, donde entonces, la arquitectura es para la ciudad, la ciudad es sin duda el principal generador de encuentros, los encuentros se realizan en espacios públicos. Y al hablar de espacios públicos, no podemos olvidar la naturaleza social de la raza humana.'
+)
+
+entradasTextos.push(entrada1, entrada2)
+
+
 function renderhome() {
 totalListAleatorio = totalList.slice();
 totalListAleatorio.sort(comparar);
 projectListHome(totalListAleatorio);
+entradasListHome(entradasTextos)
+};
 
+function entradasListHome(arr) {
+    for(let i = 0; i < arr.length; i++){
+        let works = arr[i];
+
+        const entradaCard = document.createElement('li');
+        entradaCard.classList.add('entrada-card');
+
+        const titleText = document.createElement('p');
+        titleText.classList.add('tilte-text');
+        titleText.innerText = works.title;
+
+        const dateText = document.createElement('p');
+        dateText.classList.add('date-text');
+        dateText.innerText = works.date;
+
+        entradaContent.append(entradaCard);
+        entradaCard.append(titleText, dateText);
+
+    }
 };
 
 function projectListHome(arr) {

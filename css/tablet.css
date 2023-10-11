@@ -103,6 +103,30 @@
         width: 64rem;
     }
 
+    /*seccion entradas*/
+
+    .section-entradas {
+        display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .entrada-card-section{
+        width: 21rem;
+    }
+
+    .contenido-modal-entrada {
+        width: 66rem;
+    }
+
+    .text-ebtrada {
+        width: 62rem;
+    }
+
+    .text-entrada p:nth-child(4) {
+        overflow-x: auto;
+        overflow-y: auto;
+        height: 20rem;
+    }
 
 
     /*seccion portafolio*/

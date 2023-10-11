@@ -7,8 +7,11 @@ const curiosityText = document.querySelector('.curiosity-text');
 const portafolioHome = document.querySelector('.portafolio-home');
 const sectionPortafolio = document.querySelector('.section-portafolio');
 
+
 //entradas
 const entradaContent = document.querySelector('.entrada-content');
+const setcionEntrada = document.querySelector('.section-entradas');
+const sectionDetailEntrada = document.querySelector('.section-detail-entrada');
 
 //portafolio
 const portAcademico = document.querySelector('.academico');
@@ -253,25 +256,28 @@ let entrada1 = new Texts (
 let entrada2 = new Texts (
     'Proyecto, Espacio Publico y Habitar',
     '2023/10/10',
-    'Para hablar del Proyecto y el espacio público, primero es necesario entender la relación entre la arquitectura y la ciudad, y es que, según Moneo en su libro “Inquietud Teórica y Estrategia Proyectual en la Obra de Ocho Arquitectos Contemporáneos” donde al hablar de Aldo Rossi dice “para Rossi no hay duda: el territorio de la arquitectura es la ciudad”  esto me lleva a desencadenar una sucesión de ideas, donde entonces, la arquitectura es para la ciudad, la ciudad es sin duda el principal generador de encuentros, los encuentros se realizan en espacios públicos. Y al hablar de espacios públicos, no podemos olvidar la naturaleza social de la raza humana.'
-)
+    'Para hablar del Proyecto y el espacio público, primero es necesario entender la relación entre la arquitectura y la ciudad, y es que, según Moneo en su libro “Inquietud Teórica y Estrategia Proyectual en la Obra de Ocho Arquitectos Contemporáneos” donde al hablar de Aldo Rossi dice “para Rossi no hay duda: el territorio de la arquitectura es la ciudad”  esto me lleva a desencadenar una sucesión de ideas, donde entonces, la arquitectura es para la ciudad, la ciudad es sin duda el principal generador de encuentros, los encuentros se realizan en espacios públicos. Y al hablar de espacios públicos, no podemos olvidar la naturaleza social de la raza humana.\n\nOfelia Baca en su artículo “el emplazamiento como estrategia proyectual” cita a Norberg-Shultz “todavía creemos que los lugares de congregación publica como las plazas, los pasos, los cafés, los clubes comunitarios populares, etc. […] no son cosa del pasado y si se replantean adecuadamente para las necesidades de nuestros días, deberían tener un lugar en nuestras ciudades” . En una realidad, donde cada vez el mundo se hace más digital, cabría pensar si la posición de Norberg-Shultz es “anticuada”. Sin embargo, la pandemia del año 2020 nos deja claro que su postura sigue siendo correcta, unos dos años de encierro impuesto en viviendas donde la luz del sol era un lujo, al igual que los lugares donde despejar la mente, nos arroja una clara evidencia, y es que en los proyectos arquitectónicos el espacio público debe tener un punto de valor. No se deben, por ningún motivo, subestimar los lugares de encuentro de los habitantes, encuentros que permiten intercambios.\n\nPero antes de seguir hablando del espacio público, primero hablemos del proyecto de arquitectura, y no es otra cosa que la suma de todos los componentes que conforman un edificio, donde dichos componentes son imprescindibles para el adecuado funcionamiento del mismo, como dice Ludovico Quaroni en su libro “Proyectar un Edificio Ocho Lecciones de Arquitectura”, “un buen proyecto es una “estructura”, es decir un conjunto al que no se puede añadir, quitar ni sustituir nada sin pérdida de su unidad”.\n\nUna unidad en la que es necesario reflexionar sobre el habitar, más allá de las firmitas, utilitas y venustas. Un proyecto por ende deber considerar la generación de espacio público como medio para la integración edificio-ciudad. Una integración que debe, en palabras de Moneo al referirse a Rossi, reforzar la vida en común como el atributo más importante de la arquitectura . Con respecto a estas ideas, Miguel Lacasta en su artículo “Estrategias Proyectuales en Arquitectura” dice “las herramientas proyectuales fruto de las lógicas estratégicas en la arquitectura contemporánea deberían abarcar el ámbito de la ciudad, o lo que se suele llamar espacios comunes” , es por esto que en la generación de proyecto se debe entender la ciudad, para así adaptarse a una escala metropolitana, urbana y humana.\n\nY así como un proyecto es una unidad, los edificios, que tienen una lógica interna, son necesarios considerarlos como una unidad que constituyen una parte importante en una obra más grande, que es el contexto urbano al que pertenece.\n\nLa ciudad se debe entender entonces como la preexistencia a la que hay que entender para generar espacio común, como hace muchos años en las polis griegas existía el “ágora”, lugar que servía como plaza de encuentro de los ciudadanos, donde se podían discutir de comercio, política y cultura, el ágora como espacio para el intercambio.\n\nY así entonces claro, que la ciudad es el lugar de la arquitectura y que la ciudad es una preexistencia, es necesario tomar en cuenta a Moneo al hablar de la visión de Rossi para entender la ciudad, donde es ineludible explorar como se ha construido, que ha guiado su desarrollo y de qué modo se ha formado cada área que la compone.\n\nSe debe escuchar a la ciudad, porque la finalidad de la arquitectura no es solo la de ofrecer lugares interiores, sino que debe generar espacios que dialoguen con el contexto para que forme parte de él y de los habitantes. Es necesario aprender a ver y escuchar el lugar para poder formar parte de él.\n\nCuando se escucha al entorno, estamos diseñando desde la perspectiva de una estrategia proyectual de análisis de emplazamiento que en palabras de Baca “está enfocado en lograr que un edificio pueda pertenecer e integrarse a un lugar y entorno especifico”.\n\nPara concluir, es imprescindible no confundir espacio público con edificaciones de carácter público. Un proyecto para una edificación pública o privada, con una correcta estrategia proyectual y un correcto uso de los recursos del entorno, pude general espacios comunes, esos espacios de interrelación que muchas veces menospreciamos, pero que sin duda son necesarios para el buen funcionamiento de una ciudad.\n\n'
+);
 
-entradasTextos.push(entrada1, entrada2)
+entradasTextos.push(entrada1, entrada2, entrada1, entrada2, entrada1, entrada2, entrada1, entrada2)
 
 
 function renderhome() {
 totalListAleatorio = totalList.slice();
 totalListAleatorio.sort(comparar);
 projectListHome(totalListAleatorio);
-entradasListHome(entradasTextos)
+entradasListHome(entradasTextos, entradaContent);
 };
 
-function entradasListHome(arr) {
+function entradasListHome(arr, variable) {
     for(let i = 0; i < arr.length; i++){
         let works = arr[i];
 
         const entradaCard = document.createElement('li');
         entradaCard.classList.add('entrada-card');
+
+        const linkCard = document.createElement('a')
+        linkCard.setAttribute('href', '/sectionsHTML/entradas.html')
 
         const titleText = document.createElement('p');
         titleText.classList.add('tilte-text');
@@ -281,8 +287,9 @@ function entradasListHome(arr) {
         dateText.classList.add('date-text');
         dateText.innerText = works.date;
 
-        entradaContent.append(entradaCard);
-        entradaCard.append(titleText, dateText);
+        variable.append(entradaCard);
+        entradaCard.append(linkCard);
+        linkCard.append(titleText, dateText);
 
     }
 };
@@ -323,7 +330,6 @@ function projectListHome(arr) {
 
 };
 
-
 function projectList(arr, variable) {
 
     for(let i = 0; i < arr.length; i++){
@@ -360,6 +366,87 @@ function renderPortafolio() {
     projectList(docenteList, portDocente);
 };
 
+//render entradas
+function entradasList(arr, variable) {
+    for(let i = 0; i < arr.length; i++){
+        let works = arr[i];
+
+        const entradaCard = document.createElement('li');
+        entradaCard.classList.add('entrada-card-section');
+        entradaCard.addEventListener('click', () => { renderDetailEntradas(works) });
+
+        const titleText = document.createElement('p');
+        titleText.classList.add('tilte-text');
+        titleText.innerText = works.title;
+
+        const dateText = document.createElement('p');
+        dateText.classList.add('date-text');
+        dateText.innerText = works.date;
+
+        variable.append(entradaCard);
+        entradaCard.append(titleText, dateText);
+    }
+};
+
+function renderSectionEntradas() {
+    entradasList(entradasTextos, setcionEntrada)
+}
+
+function renderTexto(arr) {
+    for(let i = 0; i < arr.length; i++){
+        let works = arr[i];
+    }
+}
+
+//render detalle entrada
+
+function renderDetailEntradas(elemento) {
+
+    sectionDetailEntrada.innerHTML = '';
+    sectionDetailEntrada.style.display = 'block';
+
+    const contenidoModal = document.createElement('div');
+    contenidoModal.classList.add('contenido-modal-entrada');
+
+    const closeButton = document.createElement('div');
+    closeButton.classList.add('button-close');
+    closeButton.addEventListener('click', () => { close(sectionDetailEntrada) });
+
+    const x = document.createElement('p');
+    x.innerText = 'X'
+
+    const textEntrada = document.createElement('div');
+    textEntrada.classList.add('text-entrada');
+
+    const titleEntrada = document.createElement('p');
+    titleEntrada.classList.add('title-entrada');
+    titleEntrada.innerText = elemento.title;
+
+    const dateEntrada = document.createElement('p');
+    dateEntrada.classList.add('date-entrada');
+    dateEntrada.innerText = elemento.date;
+
+    const contentEntrada = document.createElement('div');
+    contentEntrada.classList.add('content-entrada')
+
+    let paragraphs = elemento.content.split('\n\n')
+
+    for(let i = 0; i < paragraphs.length; i++) {
+        // Crea un nuevo elemento p para cada párrafo
+        let paragraph = document.createElement('p');
+        paragraph.classList.add('paragraph');
+        paragraph.innerText = paragraphs[i];
+
+        contentEntrada.appendChild(paragraph);
+    }
+
+
+    sectionDetailEntrada.append(contenidoModal);
+    contenidoModal.append(closeButton, textEntrada);
+    closeButton.appendChild(x);
+    textEntrada.append(titleEntrada, dateEntrada, contentEntrada);
+};
+
 //render detalle portafolio
 
 function renderDetailProtafolio(elemento) {
@@ -374,7 +461,7 @@ function renderDetailProtafolio(elemento) {
 
     const closeButton = document.createElement('div');
     closeButton.classList.add('button-close');
-    closeButton.addEventListener('click', () => { close(sectionDetailPortafolio) })
+    closeButton.addEventListener('click', () => { close(sectionDetailPortafolio) });
 
     const x = document.createElement('p');
     x.innerText = 'X'

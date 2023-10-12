@@ -55,7 +55,6 @@
 
     /*resumen curricular*/
 
-
     .curriculum {
         width: 24rem;
         height: 34rem;
@@ -103,28 +102,22 @@
         width: 70rem;
     }
 
-    /*seccion entradas*/
+    /* modales*/
 
-    .contenido-modal-entrada {
-        width: 74rem;
-        height: 60rem;
-        position: absolute;
-        top: 9rem;
-        left: 32rem;
-        background-color: var(--white);
-        padding: 2rem;
-        border-radius: 2rem;
-        overflow-x: auto;
-        overflow-y: auto;
+    .contenido-modal {
+        width: 100rem; 
     }
+
+    .text-detail {
+        width: 90rem;
+    }
+
+    /*seccion entradas*/
     
     .content-entrada {
-        width:65rem; 
-        position: absolute;
-        top: 7.5rem;
-        color: var(--color-5);
-        font-size: var(--md);
-        font-weight: 300;
+        overflow-x: auto;
+        overflow-y: auto;
+        height: 50rem;
     }
 
     /*seccion portafolio*/
@@ -137,7 +130,7 @@
 
     .portafolio {
         width: 70rem;
-        }
+    }
     
     .port-content {
         width: 64rem;
@@ -156,24 +149,9 @@
 
     /*section-detail-portafolio*/
 
-    .contenido-modal {
-        width: 90rem;
-        height: 70rem;
-    }
-
     .album-images {
         width: 84rem;
         height: 47.5rem;
-    }
-
-    .text-detail {
-        width: 84rem;
-    }
-
-    .text-detail p:nth-child(4) {
-        overflow-x: auto;
-        overflow-y: auto;
-        height: 12rem;
     }
 
     /*secion juego*/
@@ -223,7 +201,6 @@
         margin-bottom: 2rem;
     }
 
-
     .reiniciar {
         position: absolute;
         bottom: 4rem;
@@ -233,7 +210,6 @@
         height: 4rem;
         margin-top: 2rem;
     }
-
 
 
     }

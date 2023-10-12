@@ -397,6 +397,7 @@ h4 {
 .text-detail {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 33rem;
     color: var(--black);
     font-size: var(--md);
@@ -450,8 +451,6 @@ h4 {
 }
 
 .content-entrada {
-    color: var(--color-5);
-    font-size: var(--md);
     font-weight: 300;
     overflow-x: auto;
     overflow-y: auto;
@@ -459,7 +458,7 @@ h4 {
 }
 
 .content-entrada p{
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-align: justify;
 }
 

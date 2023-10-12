@@ -89,7 +89,6 @@
     }
 
 
-
     /* contenido home*/
 
     .section-home {
@@ -115,17 +114,25 @@
     }
 
     .contenido-modal-entrada {
-        width: 66rem;
-    }
-
-    .text-ebtrada {
-        width: 62rem;
-    }
-
-    .text-entrada p:nth-child(4) {
+        width: 70rem;
+        height: 55rem;
+        position: absolute;
+        top: 9rem;
+        left: 11rem;
+        background-color: var(--white);
+        padding: 2rem;
+        border-radius: 1rem;
         overflow-x: auto;
         overflow-y: auto;
-        height: 20rem;
+    }
+    
+    .content-entrada {
+        width:65rem; 
+        position: absolute;
+        top: 7.5rem;
+        color: var(--color-5);
+        font-size: var(--md);
+        font-weight: 300;
     }
 
 

@@ -90,8 +90,6 @@
         padding: 2rem;
     }
 
-   
-
     /* contenido home*/
 
      .section-home {
@@ -105,7 +103,29 @@
         width: 70rem;
     }
 
+    /*seccion entradas*/
 
+    .contenido-modal-entrada {
+        width: 74rem;
+        height: 60rem;
+        position: absolute;
+        top: 9rem;
+        left: 32rem;
+        background-color: var(--white);
+        padding: 2rem;
+        border-radius: 2rem;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+    
+    .content-entrada {
+        width:65rem; 
+        position: absolute;
+        top: 7.5rem;
+        color: var(--color-5);
+        font-size: var(--md);
+        font-weight: 300;
+    }
 
     /*seccion portafolio*/
     
@@ -127,7 +147,7 @@
         width: 64rem;
     }
 
-        /*section-aboutme*/
+    /*section-aboutme*/
 
     .section-aboutme {
         width: 70rem;

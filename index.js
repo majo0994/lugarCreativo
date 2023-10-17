@@ -535,5 +535,116 @@ function anteriorImagen(carrusel) {
 function actualizarImagen(carrusel) {
     const imagen = document.querySelector('.album');
     imagen.src = carrusel[indiceImagen];
-    console.log(indiceImagen)
   }
+
+//section game
+
+function Game (name, id, image) {
+    this.name = name;
+    this.id = id;
+    this.image = image;
+};
+
+let piedra = new Game (
+    'Piedra',
+    1,
+    '/assets/PIEDRA.png'
+);
+
+let papel = new Game (
+    'Papel',
+    2,
+    '/assets/PAPEL.png'
+);
+
+let tijera = new Game (
+    'Tijera',
+    3,
+    '/assets/TIJERA.PNG'
+);
+
+const cardGame = document.querySelector('.cards');
+const vidasResultado = document.querySelector('.vidas');
+let gameOptions = [];
+let pc;
+let triunfos = 0
+let perdidas = 0
+gameOptions.push(piedra, papel, tijera);
+
+function renderCardGame (arr) {
+    for(let i = 0; i < arr.length; i++){
+        let option = arr[i];
+
+        const  card= document.createElement('li');
+        card.addEventListener('click', () => { game(option) });
+
+        const figureCard = document.createElement('figure');
+        figureCard.classList.add('card');
+
+        const imageCard = document.createElement('img')
+        imageCard.setAttribute('src', option.image);
+
+        const nameOption = document.createElement('p');
+        nameOption.classList.add('name-option');
+        nameOption.innerText = option.name;
+
+        cardGame.append(card);
+        card.append(figureCard);
+        figureCard.append(imageCard, nameOption);
+    }
+}
+
+function renderGame () {
+    renderCardGame(gameOptions);
+};
+
+function aleatorio(min, arr) {
+    return Math.floor(Math.random() * (arr.length - min + 1) + min );
+}
+
+function renderResultados(result) {
+
+    vidasResultado.innerHTML = ''
+    const resultado = document.createElement('p');
+    resultado. innerText = result;
+    const conteoVidas = document.createElement('p')
+    conteoVidas.innerText = 'Tienes ' + triunfos + ' triunfos y ' + perdidas + ' perdidas.';
+
+    vidasResultado.append(resultado, conteoVidas);
+};
+
+
+
+function game(option) {
+
+    pc = aleatorio(1, gameOptions)
+
+    if (option.id == pc) {
+        renderResultados('Empate')
+    } else if (option.id == 1 && pc == 3) {
+        triunfos = triunfos + 1;
+        renderResultados('Ganaste');
+    } else if (option.id == 2 && pc == 1) {
+        triunfos = triunfos + 1;
+        renderResultados('Ganaste');
+    } else if (option.id == 3 && pc == 2) {
+        triunfos = triunfos + 1;
+        renderResultados('Ganaste');
+    } else {
+        perdidas = perdidas + 1;
+        renderResultados('Perdiste');
+    }
+
+    if(triunfos == 3){
+        renderResultados('GANASTE')
+        alert("GANASTE")
+    } else if(perdidas == 3){
+        renderResultados('PERDISTE')
+        alert("PERDISTE")
+    }
+};
+
+while (triunfos < 3 && perdidas < 3) {
+
+    game(option);   
+};

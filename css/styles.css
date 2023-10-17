@@ -74,6 +74,10 @@ a:visited {
     display: none !important;
 }
 
+li {
+    list-style: none;
+}
+
 /*nav bar*/
 
 .header-class{
@@ -640,6 +644,7 @@ h4 {
 
 .card {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 10rem;
@@ -649,8 +654,14 @@ h4 {
 }
 
 .card img {
-    height: 9rem;
-    width: 9rem;
+    height: 8rem;
+    width: 8rem;
+}
+
+.name-option {
+    color: var(--color-5);
+    font-size: var(--sm);
+    font-weight: 700;
 }
 
 .card:hover {

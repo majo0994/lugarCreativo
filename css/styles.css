@@ -561,6 +561,14 @@ h4 {
     cursor: pointer;
 }
 
+.div-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 68rem;
+}
+
 .album-images {
     width: 33rem;
     height: 18.5rem;

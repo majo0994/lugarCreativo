@@ -466,6 +466,9 @@ function renderDetailProtafolio(elemento) {
     const x = document.createElement('p');
     x.innerText = 'X'
 
+    const divModal = document.createElement('div');
+    divModal.classList.add('div-modal');
+
     const albumImages = document.createElement('figure');
     albumImages.classList.add('album-images');
 
@@ -503,7 +506,8 @@ function renderDetailProtafolio(elemento) {
     descriptionProject.innerText = elemento.description;
 
     sectionDetailPortafolio.append(contenidoModal);
-    contenidoModal.append(closeButton, albumImages, textDetail);
+    contenidoModal.appendChild(divModal)
+    divModal.append(closeButton, albumImages, textDetail);
     closeButton.appendChild(x);
     albumImages.append(anterior, views, siguiente);
     textDetail.append (titleProject, categoryProject, dateProject, descriptionProject)
@@ -560,7 +564,7 @@ let papel = new Game (
 let tijera = new Game (
     'Tijera',
     3,
-    '/assets/TIJERA.PNG'
+    '/assets/TIJERA.png'
 );
 
 const cardGame = document.querySelector('.cards');
@@ -612,7 +616,6 @@ function renderResultados(result) {
 
     vidasResultado.append(resultado, conteoVidas);
 };
-
 
 
 function game(option) {

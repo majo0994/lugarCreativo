@@ -100,7 +100,12 @@
 
     .contenido-modal {
         width: 70rem;
+        height: 70rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
         padding: 2rem;
+        border-radius: 2rem;
     }
 
     .text-detail {
@@ -155,6 +160,7 @@
     /*section-detail-portafolio*/
 
     .album-images {
+        margin-top: 10rem;
         width: 62rem;
         height: 35rem;
     }

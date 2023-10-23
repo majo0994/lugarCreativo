@@ -8,6 +8,7 @@
     --color-5: #7a7a7a;
     --white: #ffffff;
     --black: #000000;
+    --xs: 1rem;
     --sm: 1.4rem;
     --md: 1.6rem;
     --lg: 1.8rem;
@@ -341,11 +342,24 @@ h4 {
     color: var(--black);
 }
 
+.author {
+    margin-left: 1rem;
+    font-size: var(--sm);
+    color: var(--color-5);
+}
+
+.topic {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: var(--xs);
+    color: var(--color-5);
+}
+
 .date-text {
-    margin: 1rem;
-    text-align: left;
-    width: 18rem;
-    font-size: var(--md);
+    font-size: var(--sm);
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
     font-weight: 300;
     color: var(--color-5);
 }
@@ -434,7 +448,6 @@ h4 {
 .entrada-card-section{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     height: 16.5rem;
     width: 32rem;
@@ -451,7 +464,7 @@ h4 {
 
 .date-entrada {
     font-size: var(--sm);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .content-entrada {

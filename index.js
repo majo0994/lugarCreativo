@@ -484,11 +484,15 @@ function renderDetailEntradas(elemento) {
         contentEntrada.appendChild(paragraph);
     }
 
+    const author = document.createElement('p');
+    author.classList.add('firma');
+    author.innerText = elemento.author
+
 
     sectionDetailEntrada.append(contenidoModal);
     contenidoModal.append(closeButton, textEntrada);
     closeButton.appendChild(x);
-    textEntrada.append(titleEntrada, dateEntrada, contentEntrada);
+    textEntrada.append(titleEntrada, dateEntrada, contentEntrada, author);
 };
 
 //render detalle portafolio

@@ -352,6 +352,7 @@ h4 {
     margin-top: 0.5rem;
     font-size: var(--xs);
     color: var(--color-5);
+    color: var(--color-4);
 }
 
 .date-text {
@@ -476,6 +477,13 @@ h4 {
 .content-entrada p{
     margin-top: 2rem;
     text-align: justify;
+}
+
+.firma {
+    margin-top: 3rem;
+    font-style: italic;
+    color: var(--color-5);
+
 }
 
 /*seccion portafolio*/

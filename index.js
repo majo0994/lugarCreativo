@@ -591,18 +591,25 @@ let tijera = new Game (
 
 const cardGame = document.querySelector('.cards');
 const vidasResultado = document.querySelector('.vidas');
+const botonReiniciar = document.querySelector('.reiniciar');
 let gameOptions = [];
+let selection = [];
 let pc;
+let jugador;
+let oponente;
 let triunfos = 0
 let perdidas = 0
 gameOptions.push(piedra, papel, tijera);
 
-function renderCardGame (arr) {
-    for(let i = 0; i < arr.length; i++){
-        let option = arr[i];
+function renderCardGame() {
+
+    cardGame.innerHTML = '';
+
+    for(let i = 0; i < gameOptions.length; i++){
+        let option = gameOptions[i];
 
         const  card= document.createElement('li');
-        card.addEventListener('click', () => { game(option) });
+        card.addEventListener('click', () => { selectionGame(option) });
 
         const figureCard = document.createElement('figure');
         figureCard.classList.add('card');
@@ -617,15 +624,68 @@ function renderCardGame (arr) {
         cardGame.append(card);
         card.append(figureCard);
         figureCard.append(imageCard, nameOption);
-    }
-}
-
-function renderGame () {
-    renderCardGame(gameOptions);
+    };
+    ocultarReiniciar()
 };
 
 function aleatorio(min, arr) {
     return Math.floor(Math.random() * (arr.length - min + 1) + min );
+}
+
+function selectionGame(option) {
+
+    selection.length = 0;
+
+    pc = aleatorio(1, gameOptions)
+
+    if(pc === 1){
+        oponente = piedra;
+    } else if(pc === 2){
+        oponente = papel;
+    } else if(pc === 3){
+        oponente = tijera;
+    };
+    if(option.id == 1){
+        jugador = piedra;
+    } else if(option.id == 2){
+        jugador = papel;
+    } else if(option.id == 3){
+        jugador = tijera;
+    };
+
+    selection.push(jugador, oponente);
+    console.log(selection);
+    renderSelection(selection, ['Jugador', 'Oponente'])
+};
+
+function renderSelection(arr, variable) {
+
+    cardGame.innerHTML = '';
+    
+    for(let i = 0; i < arr.length; i++){
+        let option = arr[i];
+
+        const  card= document.createElement('li');
+
+        const figureCard = document.createElement('figure');
+        figureCard.classList.add('card-select');
+
+        const seleccionJugadores = document.createElement('p');
+        seleccionJugadores.classList.add('seleccion-jugadores')
+        seleccionJugadores.innerText = variable
+
+        const imageCard = document.createElement('img')
+        imageCard.setAttribute('src', option.image);
+
+        const nameOption = document.createElement('p');
+        nameOption.classList.add('name-option');
+        nameOption.innerText = option.name;
+
+        cardGame.append(card);
+        card.append(figureCard);
+        figureCard.append(seleccionJugadores, imageCard, nameOption);
+    };
+    game();
 }
 
 function renderResultados(result) {
@@ -639,37 +699,56 @@ function renderResultados(result) {
     vidasResultado.append(resultado, conteoVidas);
 };
 
+function ocultarReiniciar() {
+    botonReiniciar.style.display = 'none';
+}
 
-function game(option) {
+function mostarReiniciar() {
+    botonReiniciar.style.display = 'block';
+}
 
-    pc = aleatorio(1, gameOptions)
+function game() {
 
-    if (option.id == pc) {
+    if (jugador == oponente) {
         renderResultados('Empate')
-    } else if (option.id == 1 && pc == 3) {
+    } else if (jugador == piedra && oponente == tijera) {
         triunfos = triunfos + 1;
         renderResultados('Ganaste');
-    } else if (option.id == 2 && pc == 1) {
+    } else if (jugador == papel && oponente == piedra) {
         triunfos = triunfos + 1;
         renderResultados('Ganaste');
-    } else if (option.id == 3 && pc == 2) {
+    } else if (jugador == tijera && oponente == papel) {
         triunfos = triunfos + 1;
         renderResultados('Ganaste');
     } else {
         perdidas = perdidas + 1;
-        renderResultados('Perdiste');
-    }
+        renderResultados('Perdiste'); 
+    };
 
     if(triunfos == 3){
-        renderResultados('GANASTE')
-        alert("GANASTE")
+        renderResultados('GANASTE');
+        finJuego();
     } else if(perdidas == 3){
-        renderResultados('PERDISTE')
-        alert("PERDISTE")
-    }
+        renderResultados('PERDISTE');
+        finJuego();
+    } else {
+        setTimeout(renderCardGame, 2000);
+    };
+};
+
+function finJuego() {
+    mostarReiniciar()
+    cardGame.style.display = 'none';
+    botonReiniciar.addEventListener('click', reiniciarJuego);
+
+};
+
+function reiniciarJuego() {
+    location.reload()
 };
 
 while (triunfos < 3 && perdidas < 3) {
+        game(option);  
 
-    game(option);   
 };
+

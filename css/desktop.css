@@ -150,6 +150,7 @@
     /*section-detail-portafolio*/
 
     .album-images {
+
         margin-top: 25rem;
         width: 84rem;
         height: 47.5rem;
@@ -171,7 +172,7 @@
         height: 35rem;
     }
 
-    .card {
+    .card, .card-select {
         width: 20rem;
         height: 35rem;
         display: flex;

@@ -172,12 +172,12 @@
         height: 20rem;
     }
 
-    .card {
+    .card, .card-select {
         width: 20rem;
         height: 20rem;
     }
 
-    .card img {
+    .card img, .card-select img {
         height: 17rem;
         width: 17rem;
     }
@@ -187,7 +187,9 @@
         height: 20rem;
     }
 
-    
+    .reiniciar {
+        width: 68rem;
+    }
 
 
 

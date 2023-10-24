@@ -285,7 +285,6 @@ h4 {
     height: 18rem;
     text-align: center;
     border-radius: 0.5rem;
-    margin-right: 1rem;
 }
 
 .content {
@@ -504,11 +503,11 @@ h4 {
 .port-content {
     display: flex;
     justify-content: flex-start;
-    width: 25rem;
+    width: 33rem;
     margin-left: 1rem;
     overflow-x: auto;
     overflow-y: auto;
-    width: 25rem;
+    width: 27rem;
 }
 
 .project-card {
@@ -687,8 +686,15 @@ h4 {
 }
 
 .card img, .card-select img {
-    height: 8rem;
-    width: 8rem;
+    height: 6.5rem;
+    width: 6.5rem;
+}
+
+.seleccion-jugadores {
+    justify-content: center;
+    font-size: var(--md);
+    font-weight: 700;
+    color: var(--color-4);
 }
 
 .name-option {

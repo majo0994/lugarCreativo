@@ -236,10 +236,32 @@ let entregaFinal2 = new Projects (
     ]
 );
 
+let entregaFinal3 = new Projects (
+    'docente',
+    'Entrega Final 2do Semestre',
+    '2023-1',
+    'Toca nuevamente un ejercicio para segundo semestre, en esta ocasión se busca que el estudiante desarrolle estrategias de implantación a través de volúmenes y movimiento topográfico y a su vez se busca que los estudiantes entiendan la diferenciación espacial que conlleva la concepción de un edificio.',
+    '/portafolio/entregaFinal3/vista1.jpg',
+    [
+        '/portafolio/entregaFinal3/vista1.jpg',
+        '/portafolio/entregaFinal3/vista2.jpg',
+        '/portafolio/entregaFinal3/vista3.jpg',
+        '/portafolio/entregaFinal3/vista4.jpg',
+        '/portafolio/entregaFinal3/vista5.jpg',
+        '/portafolio/entregaFinal3/vista6.jpg',
+        '/portafolio/entregaFinal3/vista7.jpg',
+        '/portafolio/entregaFinal3/vista8.jpg',
+        '/portafolio/entregaFinal3/vista9.jpg',
+        '/portafolio/entregaFinal3/vista10.jpg',
+        '/portafolio/entregaFinal3/vista11.jpg',
+        '/portafolio/entregaFinal3/vista12.jpg'
+    ]   
+);
+
 academicoList.push(posada, spa, hotel, mercado);
 profesionalList.push(laToraEdificio, laToraTienda);
-docenteList.push(entregaFinal1, entregaFinal2);
-totalList.push(posada, spa, hotel, mercado, laToraEdificio, laToraTienda, entregaFinal1, entregaFinal2);
+docenteList.push(entregaFinal1, entregaFinal2, entregaFinal3);
+totalList.push(posada, spa, hotel, mercado, laToraEdificio, laToraTienda, entregaFinal1, entregaFinal2, entregaFinal3);
 
 function Texts (title, date, content, author, topic) {
     this.title = title;
@@ -655,10 +677,10 @@ function selectionGame(option) {
 
     selection.push(jugador, oponente);
     console.log(selection);
-    renderSelection(selection, ['Jugador', 'Oponente'])
+    renderSelection(selection, 'Jugador', 'Oponente')
 };
 
-function renderSelection(arr, variable) {
+function renderSelection(arr, variableJugador, variableOponente) {
 
     cardGame.innerHTML = '';
     
@@ -672,7 +694,7 @@ function renderSelection(arr, variable) {
 
         const seleccionJugadores = document.createElement('p');
         seleccionJugadores.classList.add('seleccion-jugadores')
-        seleccionJugadores.innerText = variable
+        seleccionJugadores.innerText = i === 0 ? variableJugador : variableOponente;
 
         const imageCard = document.createElement('img')
         imageCard.setAttribute('src', option.image);

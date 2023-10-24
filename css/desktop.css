@@ -110,6 +110,10 @@
 
     .text-detail {
         width: 90rem;
+        height: 50rem;
+        overflow-x: auto;
+        overflow-y: auto;
+        height: 50rem;
     }
 
     /*seccion entradas*/
@@ -150,8 +154,7 @@
     /*section-detail-portafolio*/
 
     .album-images {
-
-        margin-top: 25rem;
+        margin-top: 1rem;
         width: 84rem;
         height: 47.5rem;
     }
@@ -196,6 +199,10 @@
     .card:hover {
         width: 20rem;
         height: 35rem;
+    }
+
+    .seleccion-jugadores {
+        margin-bottom: 10rem;
     }
 
     .vidas p:nth-child(1) {

@@ -178,8 +178,8 @@
     }
 
     .card img, .card-select img {
-        height: 17rem;
-        width: 17rem;
+        height: 16rem;
+        width: 16rem;
     }
 
     .card:hover {

@@ -570,7 +570,21 @@ h4 {
 
 .section-aboutme p {
     text-justify: auto;
-    margin: 2rem 0;
+    margin: 1rem 0;
+}
+
+.servicios{
+    justify-content: left;
+    width: 33rem;
+}
+
+.servicios li{
+    justify-content: left;
+    margin-top: 0.5rem;
+}
+
+blockquote {
+    margin-bottom: 1rem;
 }
 
 /*section-detail-portafolio*/

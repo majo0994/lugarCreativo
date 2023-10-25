@@ -157,6 +157,13 @@
             width: 66rem;
     }
 
+    .servicios{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 66rem;
+    }
+
     /*section-detail-portafolio*/
 
     .album-images {

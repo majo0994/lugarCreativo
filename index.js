@@ -311,7 +311,7 @@ let entrada5 = new Texts(
     'docencia, arquitectura, proyecto, procesos'
 );
 
-entradasTextos.push(entrada1, entrada2, entrada3)
+entradasTextos.push(entrada1, entrada2, entrada3, entrada4)
 
 
 function renderhome() {
